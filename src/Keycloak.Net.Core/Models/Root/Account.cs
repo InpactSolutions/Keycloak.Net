@@ -9,5 +9,5 @@ public class Account
 	public Name Name { get; set; }
 
 	[JsonPropertyName("locales")]
-	public List<string> Locales { get; set; }
+	public List<Locale> Locales { get; set; }
 }
