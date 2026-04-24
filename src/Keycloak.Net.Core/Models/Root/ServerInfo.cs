@@ -40,4 +40,7 @@ public class ServerInfo
 
 	[JsonPropertyName("enums")]
 	public Enums Enums { get; set; }
+
+	[JsonPropertyName("features")]
+	public List<Feature> Features { get; set; }
 }

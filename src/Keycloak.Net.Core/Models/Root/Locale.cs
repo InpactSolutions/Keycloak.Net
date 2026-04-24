@@ -1,4 +1,4 @@
-﻿using Keycloak.Net.Common.Converters;
+using Keycloak.Net.Common.Converters;
 using System.Runtime.Serialization;
 
 namespace Keycloak.Net.Models.Root;
@@ -8,18 +8,24 @@ public enum Locale
 {
 	En,
 	Ar,
+	Az,
 	Ca,
 	Cs,
 	Da,
 	De,
 	El,
 	Es,
+	Eu,
 	Fa,
 	Fr,
 	Fi,
+	Hr,
 	Hu,
 	It,
 	Ja,
+	Kk,
+	Ko,
+	Ky,
 	Lt,
 	Lv,
 	Nl,
@@ -28,8 +34,10 @@ public enum Locale
 	Pt,
 	[EnumMember(Value = "pt-BR")]
 	PtBr,
+	Ro,
 	Ru,
 	Sk,
+	Sl,
 	Sv,
 	Th,
 	Tr,

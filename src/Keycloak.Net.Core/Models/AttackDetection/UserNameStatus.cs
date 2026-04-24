@@ -9,5 +9,5 @@ public class UserNameStatus
 	[JsonPropertyName("lastIPFailure")]
 	public string LastIpFailure { get; set; }
 	[JsonPropertyName("lastFailure")]
-	public int? LastFailure { get; set; }
+	public long? LastFailure { get; set; }
 }
