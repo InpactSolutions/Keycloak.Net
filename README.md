@@ -6,7 +6,7 @@
  * allow usage of CancellationTokens
  * changed ClientConfig to Dictionary<string, string>
  * removed signing
- * .NET 8 support only
+ * .NET 8 and .NET 10 support only
  * updated for keycloak version 25+
  * added support for changing default `AdminClientId` which has default `admin-cli` value
  * added support for System.Text.Json in replacement of NewtonsoftJson.
