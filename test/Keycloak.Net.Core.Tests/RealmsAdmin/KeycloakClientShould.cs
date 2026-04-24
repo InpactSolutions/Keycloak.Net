@@ -91,10 +91,11 @@ namespace Keycloak.Net.Tests
             }
         }
 
-        [Theory]
+        [SkippableTheory]
         [InlineData("master")]
         public async Task GetRealmUsersManagementPermissionsAsync(string realm)
         {
+            Skip.IfNot(IsServerFeatureEnabled("ADMIN_FINE_GRAINED_AUTHZ"), "Requires Keycloak feature ADMIN_FINE_GRAINED_AUTHZ (v1) to be enabled.");
             var result = await _client.GetRealmUsersManagementPermissionsAsync(realm).ConfigureAwait(false);
             Assert.NotNull(result);
         }

@@ -223,10 +223,11 @@ namespace Keycloak.Net.Tests
             }
         }
 
-        [Theory]
+        [SkippableTheory]
         [InlineData("master")]
         public async Task GetRoleAuthorizationPermissionsInitializedForRealmAsync(string realm)
         {
+            Skip.IfNot(IsServerFeatureEnabled("ADMIN_FINE_GRAINED_AUTHZ"), "Requires Keycloak feature ADMIN_FINE_GRAINED_AUTHZ (v1) to be enabled.");
             var roles = await _client.GetRolesAsync(realm).ConfigureAwait(false);
             string roleName = roles.FirstOrDefault()?.Name;
             if (roleName != null)

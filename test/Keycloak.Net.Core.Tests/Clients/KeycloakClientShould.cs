@@ -140,10 +140,11 @@ namespace Keycloak.Net.Tests
             }
         }
 
-        [Theory]
+        [SkippableTheory]
         [InlineData("Insurance", "insurance-product")]
         public async Task GetClientAuthorizationPermissionsInitializedAsync(string realm, string clientId)
         {
+            Skip.IfNot(IsServerFeatureEnabled("ADMIN_FINE_GRAINED_AUTHZ"), "Requires Keycloak feature ADMIN_FINE_GRAINED_AUTHZ (v1) to be enabled.");
             var clients = await _client.GetClientsAsync(realm).ConfigureAwait(false);
             string clientsId = clients.FirstOrDefault(x => x.ClientId == clientId)?.Id;
             if (clientsId != null)
